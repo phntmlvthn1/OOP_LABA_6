@@ -45,9 +45,8 @@ namespace OOP_LABA_6
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(3, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 29);
+            this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // label3
             // 
@@ -69,6 +68,7 @@ namespace OOP_LABA_6
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);

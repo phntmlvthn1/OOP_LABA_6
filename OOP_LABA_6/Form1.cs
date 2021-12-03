@@ -275,15 +275,26 @@ namespace OOP_LABA_6
         }
         public void DrawLine(int num, Form1 sender, Bitmap bmp, Graphics g)
         {
-            type = 4;
-            Font font = new Font("Arial", 25, FontStyle.Regular);
+            if (type == 4)
+            { 
+            
             Pen p = new Pen(Color.FromName(clr), 4);
             Point p1 = new Point(x - 50, y + 45);
             Point p2 = new Point(x + 50, y - 45);
             g.DrawLine(p, p1, p2);
-            g.DrawString((num + 1).ToString(), font, Brushes.Black, x - 15, y + 60);
             sender.BackgroundImage = bmp;
-
+            }
+            else
+            {
+                type = 4;
+                Font font = new Font("Arial", 25, FontStyle.Regular);
+                Pen p = new Pen(Color.FromName(clr), 4);
+                Point p1 = new Point(x - 50, y + 45);
+                Point p2 = new Point(x + 50, y - 45);
+                g.DrawLine(p, p1, p2);
+                g.DrawString((num + 1).ToString(), font, Brushes.Black, x - 15, y + 60);
+                sender.BackgroundImage = bmp;
+            }
         }
 
     }
