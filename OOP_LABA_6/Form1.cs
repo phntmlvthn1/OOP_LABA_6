@@ -292,7 +292,6 @@ namespace OOP_LABA_6
     {
         static public int size = 0;
         static public Figure[] figures;
-        static public Figure[] colored;
         static public int x_ = 150;
         static public int y_ = 200;
         static public int count = 0;
@@ -352,7 +351,7 @@ namespace OOP_LABA_6
                 string oldclr;
                 oldclr = figures[index].clr;
                 int k = figures[index].type;
-                if (move == 2 || move == 1 || move == 3 || move == 4)
+                if ((move == 2 || move == 1 || move == 3 || move == 4) )
                 {
                     figures[index].clr = "white";
                     if (k == 1)
@@ -363,13 +362,13 @@ namespace OOP_LABA_6
                         figures[index].DrawTriangle(index, sender, bmp, g);
                     if (k == 4)
                         figures[index].DrawLine(index, sender, bmp, g);
-                    if (move== 1)
+                    if (move== 1 && figures[index].y > 190)
                         figures[index].y -= 20;
-                    if (move == 2)
+                    if (move == 2 && figures[index].y < 745)
                         figures[index].y += 20;
-                    if (move == 3)
+                    if (move == 3 && figures[index].x < 1490 )
                         figures[index].x += 20;
-                    if (move == 4)
+                    if (move == 4 && figures[index].x >55)
                         figures[index].x -= 20;
                 }
                 if (resz == 2 || resz == 1)
